@@ -82,6 +82,10 @@ On the right the frequency response is shown (DFT of size 100x100).
 The filter is in fact a low-pass, with different cut-off frequencies in x and y direction.
 ![kernel](./doc/kernel.png)
 
+## Output sample
+
+![Screenshot](outputv1.png)
+
 
 ## How to select parameters
 
