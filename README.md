@@ -1,7 +1,5 @@
 # Word Segmentation with Scale Space Technique
 
-**Update 2021: installable Python package, added line clustering and word sorting**
-
 Implementation of the scale space technique for word segmentation proposed by 
 [R. Manmatha and N. Srimal](http://ciir.cs.umass.edu/pubfiles/mm-27.pdf). 
 Even though the paper is from 1999, the method still achieves good results, is fast, and has a simple implementation. 
@@ -101,9 +99,3 @@ The filter is in fact a low-pass, with different cut-off frequencies in x and y 
 The best way to find the optimal parameters is to use a dataset (e.g. IAM) and optimize the parameters w.r.t. some
 evaluation metric (e.g. intersection over union).
 
-## Results
-
-This algorithm gives good results on datasets with large inter-word-distances and small intra-word-distances like IAM.
-However, for historical datasets like Bentham or Ratsprotokolle results are not very good and more complex approaches
-should be preferred (e.g., a neural network based approach as implemented in
-the [WordDetectorNN](https://github.com/githubharald/WordDetectorNN) repository).
