@@ -35,7 +35,7 @@ parser.add_argument('--min_area', type=int, default=100)
 parser.add_argument('--img_height', type=int, default=1000)
 parsed = parser.parse_args()
 
-
+print("File path: ", parsed.data)
 def save_image_names_to_text_files():
 
     for fn_img in get_img_files(parsed.data):
@@ -69,7 +69,15 @@ def save_image_names_to_text_files():
                                det.bbox.h, det.bbox.x:det.bbox.x+det.bbox.w]
                 # cv2.imwrite("")
 
-                cv2.imwrite("line" + str(line_idx) + "word" +
+                path = '../test_images'
+                # Check whether the specified
+                # path exists or not
+                isExist = os.path.exists(path)
+                if isExist == False:
+                    os.mkdir(path)
+                    print("Directory Created")
+
+                cv2.imwrite("../test_images/line" + str(line_idx) + "word" +
                             str(word_idx) + ".jpg", crop_img)
                 full_img_path = "line" + \
                     str(line_idx) + "word" + str(word_idx)+".jpg"
@@ -80,7 +88,7 @@ def save_image_names_to_text_files():
                 textfile = open("img_names_sequence.txt", "w")
                 for element in list_img_names_serial:
                     textfile.write(element + "\n")
-                textfile. close()
+                textfile.close()
 
         plt.show()
 
