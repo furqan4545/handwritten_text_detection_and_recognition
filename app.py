@@ -100,6 +100,8 @@ def save_image_names_to_text_files():
 save_image_names_to_text_files()
 
 #########################################################################################################
+#################### Recognizing part below ###############################
+
 
 np.random.seed(42)
 tf.random.set_seed(42)
